@@ -1,0 +1,16 @@
+server:
+  port: 8003
+eureka:
+  instance:
+    instance-id: shop-user-service
+    appname: ${spring.application.name}
+    hostname: 39.97.175.215
+    port: 8001
+  client: 
+    service-url: 
+         defaultZone: http://admin:wdgcould@${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+profiles:
+  dev
+spring:
+  application:
+    name: could-user
